@@ -4,7 +4,7 @@ platform :ios do
   desc "Create or update app identifiers"
   lane :identifiers do
     create_app_identifier(
-      app_identifier: "com.beispiel.app", # <- Passe das an deine App-ID an
+      app_identifier: "trio", # <- Passe das an deine App-ID an
       team_id: ENV["TEAMID"]
     )
 
