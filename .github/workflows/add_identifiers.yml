@@ -1,26 +1,3 @@
-default_platform(:ios)
-
-platform :ios do
-  desc "Create or update app identifiers"
-  lane :identifiers do
-    create_app_identifier(
-      app_identifier: "trio", # <- Passe das an deine App-ID an
-      team_id: ENV["TEAMID"]
-    )
-
-    enable_services(
-      app_identifier: "com.beispiel.app", # <- Passe das auch an
-      services: {
-        app_groups: "on",
-        push_notification: "on",
-        in_app_purchase: "on"
-      }
-    )
-  end
-end
-
-
-
 name: 2. Add Identifiers
 run-name: Add Identifiers (${{ github.ref_name }})
 on:
