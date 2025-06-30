@@ -1,0 +1,2 @@
+      - name: Install Fastlane (direkt)
+        run: gem install fastlane
